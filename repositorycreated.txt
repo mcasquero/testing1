@@ -1,0 +1,13 @@
+mkdir testing1
+cd ./testing1
+echo "#testing1_repository" >> README.md
+echo "testing 1 is a repository to try different exercises within Kschool's Data Science Master" >> README.md
+git init
+git status
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/mcasquero/testing1.git
+git push -u origin master
+git status
+cd ./testing1
+cat ~/.history | tail -n 80 > repositorycreated.txt
