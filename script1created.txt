@@ -1,0 +1,25 @@
+#CODING THE FIRST SCRIPT
+
+##Creating the file:
+echo '#!bin/bash' > userdate.sh 
+echo "This file is created by $USER on $DATE" >> userdate.sh
+
+##Executing the file created:
+bash userdate.sh
+###(... We cannot do it, because we do not have execute permission)
+
+##Giving execute permission to the user:
+chmod u+x userdate.sh
+###(... The user has permission to execute it now)
+
+##Other ways to execute the file:
+cat userdate.sh
+./userdate.sh
+
+##Adding and commiting the script created to Github "testing1" current repository: 
+git add userdate.sh
+git commit -m "commit adding userdate.sh"
+git push origin master
+
+##Creating this .txt file to explain how to create the userdate.sh script:
+cat ~/.history | tail -n 40 > script1created.txt
