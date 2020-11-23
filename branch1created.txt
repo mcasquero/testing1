@@ -6,9 +6,9 @@ git init
 git pull origin master
 
 ##Coding the first branch "branch1" into "testing1" repository.
-###Creating "branch1" branch and moving on it from master:
+###A)Creating "branch1" branch and moving on it from master:
 git checkout -b branch1
-###Pushing the new "branch1" branch from local into "testing1" github repository:
+###B)Pushing the new "branch1" branch from local into "testing1" github repository:
 git push origin branch1
 
 ##Coding a test script file into "branch1" branch:
@@ -29,4 +29,4 @@ git checkout master
 git merge branch1
 ###C)Applying all changes from local into "testing1" github repository:
 git push origin master
-cat ~/.history | tail -n 80 > branch1created.txt
+
