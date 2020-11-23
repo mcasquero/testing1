@@ -1,0 +1,32 @@
+#CREATING THE FIRST BRANCH ("BRANCH1")
+
+##Running and updating the "testing1" repository master:
+cd ./testing1
+git init
+git pull origin master
+
+##Coding the first branch "branch1" into "testing1" repository.
+###Creating "branch1" branch and moving on it from master:
+git checkout -b branch1
+###Pushing the new "branch1" branch from local into "testing1" github repository:
+git push origin branch1
+
+##Coding a test script file into "branch1" branch:
+echo '#!/bin/bash' > branch1scriptest.sh
+echo "Hello! /n This is a script file to test the first brunch created within testing1 repository" >> branch1scriptest.sh
+echo "The code of this script help you to find, within the dsc directory history, all the code lines where I have used the chmod command to give permissions" >> branch1scriptest.sh
+cat ~/.history | grep chmod >> branch1scriptest.sh
+
+##Adding and commiting the test script file ("branch1scriptest.sh") created on "branch1" branch:
+git add branch1scriptest.sh
+git commit -m "Commit adding to the script branch1scriptest.sh on branch1" 
+git push origin branch1
+
+##Applying all the changes or commits made on "branch1" branch into master.
+###A)Moving from "branch1" into master:
+git checkout master 
+###B)Merging all commits from "branch1" into master:
+git merge branch1
+###C)Applying all changes from local into "testing1" github repository:
+git push origin master
+cat ~/.history | tail -n 80 > branch1created.txt
